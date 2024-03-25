@@ -1,0 +1,94 @@
+
+.container{
+    width: 70%;
+    justify-content: space-around;
+    margin: 0px 200px;
+    margin-top: 50px;
+}
+.product-head{
+    width: 99%;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 2px solid brown;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+}
+.products img {
+    height: 86px;
+    width: 77px;
+}
+.products {
+    width: 95%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid brown;
+    padding: 10px 0;
+    flex-direction: row;
+}
+span {
+    font: initial;
+    margin-left: 25px;
+}
+h5.title {
+    margin-left: 210px;
+    width: 23%;
+    margin-right: -16px;
+}
+
+h5.price {
+    margin-left: 57px;
+    margin-right: 21px;
+}
+
+h5.total {
+    margin-right: 134px;
+    margin-left: 93px;
+}
+h5.quentity {
+    margin-right: -9px;
+}
+
+.price {
+    width: 14%;
+    align-items: center;
+    display: flex;
+    font-family: ui-rounded;
+    font-size: 20px;
+    margin-left: 4px;
+}
+
+.total {
+    width: 10px;
+    display: flex;
+    align-items: center;
+    font-family: ui-rounded;
+    font-size: 20px;
+}
+.totalcontainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+.totaltitle {
+    width: 17%;
+    font-family: ui-rounded;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.baskettotal {
+    width: 4%;
+    font-family: ui-rounded;
+    font-size: 20px;
+    margin-right: 87px;
+    margin-left: -63px;
+}
+

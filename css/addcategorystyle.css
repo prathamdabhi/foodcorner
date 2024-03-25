@@ -1,0 +1,49 @@
+﻿* {
+    margin: 0;
+    padding: 0px;
+}
+
+.form-group {
+    display: flex;
+    margin: 12px 10px;
+}
+
+.control-label {
+    font-size: 15px;
+    font-family: ui-sans-serif;
+}
+
+.product-name {
+    border-radius: 5px;
+}
+
+.btn-category {
+    cursor: pointer;
+    margin-top: 11px;
+    background-color: rgb(253,176,34);
+    color: antiquewhite;
+    line-height: 29px;
+    border-radius: 5px;
+    border: 2px solid rgb(253,77,8);
+    box-shadow: 0 10px 15px rgb(250,120,69);
+}
+
+    .btn-category:hover {
+        background-color: antiquewhite;
+        color: rgb(253,176,34);
+    }
+
+.horizontal {
+    margin-left: 3px;
+    margin-bottom: 26px;
+    margin-top: 2px;
+}
+
+.product-name {
+    padding: 2px 1px;
+    margin-left: 4px;
+}
+
+    .product-name:hover {
+        border-color: aqua;
+    }

@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="foodcorner.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="css/headstyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div class="header">
+                <div class="headerbar">
+                    <div class="account">
+                        <ul>
+                            <a href="#">
+                                <li>
+                                    <i class="fa-solid fa-house-chimney"></i>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <i class="fa-solid fa-magniying-glass searchicon" id="searchicon1"></i>
+                                </li>
+                            </a>
+                            <div class="search" id="searchinput1">
+                                <input type="search" class="search1" />
+                                <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                            </div>
+                            <a href="#">
+                                <li>
+                                    <i class="fa-solid fa-user" id="user-mb"></i>
+                                </li>
+
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <a href="adminhome.aspx">
+                                <li>Home </li>
+                            </a>
+                            
+                            
+                            
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="logo">
+                    <h3 class="h3">FOOD</h3>
+                    <h3>CORNER</h3>
+                </div>
+                <div class="bar">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark" id="hdcross"></i>
+                </div>
+                <div class="nav">
+                    <ul>
+                       
+                        
+                        
+                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage<b class="Caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="addbrand.aspx">Add Brand</a></li>
+                                <li><a href="addcategory.aspx">Add Category</a></li>
+                            </ul>
+
+                        </li>
+                        <a href="addproduct.aspx"><b>Add products</b></a>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report<b class="Caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Report.aspx">Users Report</a></li>
+                                <li><a href="ppreport.aspx">Invoice Report</a></li>
+                                <li><a href="product_report.aspx">Products Report</a></li>
+                            </ul>
+
+</li>
+                    </ul>
+                    
+                </div>
+                <div class="account">
+                    <a href="../home.aspx">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+
+                    <input type="search" class="search1" />
+                    <a href="#">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <asp:Button ID="adminlogout" runat="server" Text="Sign Out" CssClass="logout" OnClick="adminlogout_Click" />
+                   
+
+                </div>
+            </div>
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <p>Copyright &copy;2024 Design By <span class="designer">Pratham</span></p>
+        </div>
+    </form>
+</body>
+</html>

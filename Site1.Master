@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="foodcorner.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>FOOD CORNER</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="css/headstyle.css" rel="stylesheet" />
+    <style>
+        .footer {
+    background-color: rgb(227 161 98);
+    width: 100%;
+    text-align: center;
+    position:absolute;
+}
+        .nav ul li {
+    padding: 10px 3px;
+    font-size: 15px;
+    font-weight: bold;
+}
+    </style>
+    <script>
+        $(document).ready(function myfunction() {
+            $("#btncart").click(function myfunction() {
+                window.location.href = "~/cart.aspx";
+            });
+
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+        <div class="header">
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="#">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                        </a>
+                        <a href="#">
+                        <li>
+                            <i class="fa-solid fa-magniying-glass searchicon" id="searchicon1"></i>
+                        </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search" class="search1" />
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="#">
+                        <li>
+                            <i class="fa-solid fa-user" id="user-mb"></i>
+                        </li>
+                       
+                        </a>
+                    </ul>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="home.aspx">
+                        <li> Home </li>
+                        </a>
+                        <a href="about.aspx">
+                        <li> About </li>
+                        </a>
+                        <a href="contact.aspx">
+                        <li> Contact us </li>
+                        </a>
+                        <a href="menu.aspx">
+                        <li> Food Menu </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <h3 class="h3">FOOD</h3> <h3>CORNER</h3>
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="home.aspx">
+                    <li> Home </li>
+                    </a>
+                    <a href="about.aspx">
+                    <li> About </li>
+                    </a>
+                    <a href="contact.aspx">
+                    <li> Contact us </li>
+                    </a>
+                    <a href="menu.aspx">
+                    <li> Food Menu </li>
+                    </a>
+                    <a href="Feedback.aspx">
+                        <li>Feedback </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="account">
+                <a href="#">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </a>
+
+                <input type="search" class="search1" />
+                <a href="#">
+                    <i class="fa fa-search"></i>
+                </a>
+                
+                <a href="login.aspx">
+                    <i id="profileIcon" class="fa fa-user" runat="server" onclick="redirectToProfilePage()"></i>
+                </a>
+                <asp:Label ID="user_name" runat="server" Text="Label" Visible="false"></asp:Label>
+               <%-- <asp:Button ID="pf" runat="server" Text="Profile" OnClick="pf_Click" />--%>
+                 <asp:ImageButton CssClass="imgbtn" ID="profile" runat="server" ImageUrl="~/image/Profile.png" Height="32px" OnClick="profile_Click" Width="39px" ImageAlign="Middle" />
+                 <asp:Button ID="adminlogout" runat="server" Text="Sign Out" CssClass="logout" OnClick="adminlogout_Click"  />
+                <a href="cart.aspx" class="cart-sup">
+                    <i class="fa-solid fa-cart-shopping" id="btncart"></i>
+                    <sup class="badge" id="pcount" runat="server">
+                        <asp:Literal ID="lblCount" runat="server"></asp:Literal>
+                    </sup>
+                </a>
+                
+            </div>
+        </div>
+    </header>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+         <div class="footer">
+     <p>Copyright &copy;2024 Design By <span class="designer">Pratham</span></p>
+ </div>
+    </form>
+    
+ </body>
+    
+</html>
